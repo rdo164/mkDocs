@@ -33,3 +33,22 @@ Las dos **únicas opciones de configuración** son:
 - site_name: PEPAS-API
 - site_url: https://example.com/
 ```
+
+## Desplegarlo en Github Pages
+> Hay que crear una Github Actions
+dentro del directorio crear la carpeta .github
+dentro de la carpeta otra carpeta llamada workflows y en esta creamos nuestro archivo .yml para conseguir el CICD.
+Píldora Path
+``` 
+Carpeta padre/
+              .git
+              .github/ 
+                      workflows/
+                                XXXXXXXX.yml(encargado del CICD)
+```
+
+## CREAR EL CICD 
+
+POWERSHELL en **administrador**
+
+en el archivo .yml runs-on:[self-hosted]
