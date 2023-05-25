@@ -52,3 +52,9 @@ Carpeta padre/
 POWERSHELL en **administrador**
 
 en el archivo .yml runs-on:[self-hosted]
+
+
+
+## 
+dentro de github pages se ha creado una nueva rama (gh-pages) para la automaticzacion de la página web
+
