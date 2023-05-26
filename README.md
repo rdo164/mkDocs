@@ -58,3 +58,15 @@ en el archivo .yml runs-on:[self-hosted]
 ## 
 dentro de github pages se ha creado una nueva rama (gh-pages) para la automaticzacion de la página web
 
+## CREAR ENTORNOS VIRTUALES CON VENWRAPPER
+1. Instalar python
+2. Instalar gestor de paquetes PIP
+```
+curl https://boootstrap.pypa.io/get-pip.py
+```
+3. Instalar **virtualenwrapper** (provee un entorno virtual dedicado a cada proyecto desarrollado con django)
+```
+pip install virtualenvwrapper-win
+```
+4. 
+mkvirtualenv nombre_del_entorno 
