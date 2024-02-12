@@ -1,5 +1,9 @@
 site_name: PEPAS-API
+<<<<<<< Updated upstream
 
+=======
+repo_url: https://rdo164.github.io/mkDocs/
+>>>>>>> Stashed changes
 nav:
   - 'La Línea de Órdenes': '011.la-línea-de-órdenes.md'
   - 'Datos': '03.datos.md'

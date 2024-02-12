@@ -1,0 +1,1107 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation of ROD">
+      
+      
+      
+      
+        <link rel="prev" href="../../03.datos/">
+      
+      
+        <link rel="next" href="../../2_doc_md/09.documentacion-con-markdown/">
+      
+      
+      <link rel="icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.9">
+    
+    
+      
+        <title>Lógica - PEPAS-API</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.f2e4d321.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="light-blue" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#logica" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="PEPAS-API" class="md-header__button md-logo" aria-label="PEPAS-API" data-md-component="logo">
+      
+  <img src="../../assets/images/logo.svg.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PEPAS-API
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Lógica
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="light-blue" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9h-1.9M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69m-9.15 3.96h2.3L12 9l-1.15 3.65Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="light-blue" data-md-color-accent="blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="light-blue" data-md-color-accent="blue"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://rdo164.github.io/mkDocs/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Rdo164
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../011.la-l%C3%ADnea-de-%C3%B3rdenes/" class="md-tabs__link">
+        
+  
+    
+  
+  La Línea de Órdenes
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../03.datos/" class="md-tabs__link">
+        
+  
+    
+  
+  Datos
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+    
+  
+  Lógica
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../2_doc_md/09.documentacion-con-markdown/" class="md-tabs__link">
+        
+  
+    
+  
+  Documentación con Markdown
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="PEPAS-API" class="md-nav__button md-logo" aria-label="PEPAS-API" data-md-component="logo">
+      
+  <img src="../../assets/images/logo.svg.png" alt="logo">
+
+    </a>
+    PEPAS-API
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://rdo164.github.io/mkDocs/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Rdo164
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../011.la-l%C3%ADnea-de-%C3%B3rdenes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    La Línea de Órdenes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03.datos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Datos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Lógica
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Lógica
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#operaciones-logicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operaciones lógicas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#otras-operaciones-que-devuelven-valores-logicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Otras operaciones que devuelven valores lógicos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Otras operaciones que devuelven valores lógicos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#precedencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Precedencia
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#un-poco-de-pensamiento-computacional" class="md-nav__link">
+    <span class="md-ellipsis">
+      Un poco de pensamiento computacional
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operaciones-a-nivel-de-bit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operaciones a nivel de bit
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#todo-esta-en-stackoverflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      todo está en StackOverflow,
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concluyendo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concluyendo
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2_doc_md/09.documentacion-con-markdown/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Documentación con Markdown
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#operaciones-logicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operaciones lógicas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#otras-operaciones-que-devuelven-valores-logicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Otras operaciones que devuelven valores lógicos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Otras operaciones que devuelven valores lógicos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#precedencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Precedencia
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#un-poco-de-pensamiento-computacional" class="md-nav__link">
+    <span class="md-ellipsis">
+      Un poco de pensamiento computacional
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operaciones-a-nivel-de-bit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operaciones a nivel de bit
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#todo-esta-en-stackoverflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      todo está en StackOverflow,
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concluyendo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concluyendo
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="logica">Lógica</h1>
+<p>Estamos tratando con ordenadores. La computación se basa en bits. Los bits
+solo pueden tener dos valores: 0 o 1. Verdad o mentira. Este principio se
+utiliza para tomar decisiones como, por ejemplo, decidir si un número es mayor
+que otro. Ya nos preocuparemos de hacer una reedición de este libro cuando
+la computación cuántica introduzca nuevos paradigmas y sea asequible
+mortales como nosotros. Pero, vamos a centrarnos...</p>
+<p>El tipo asociado a la verdad o mentira, se llama <em>booleano</em> en honor a
+George Boole y su famosa (y odiada por muchos) "álgebra de Boole".</p>
+<p>En muchos lenguajes, podemos utilizar distintos tipos de datos para
+representar booleanos, En C y C++ podemos utilizar los enteros 0 y 1 como
+booleanos, aunque el propio C++ ya implemente estos tipos de forma nativa.
+En Python, cualquier cosa que pueda parecer un booleano lo es, como un entero
+o un conjunto. En Go eso no es así, siendo obligatorio el uso de
+variables de tipo booleano.</p>
+<h2 id="operaciones-logicas">Operaciones lógicas</h2>
+<p>Las operaciones lógicas de las que disponemos en Go son las ya clásicas
+de otros lenguajes de programación. Al aplicar estas operaciones, obtendremos
+otra salida booleana.</p>
+<p>Así pues, el operando negación, <code>!</code>, nos devolverá el valor contrario al
+que tengamos. De forma que <code>!true</code> tiene como valor <code>false</code> y <code>!true</code>
+devolverá <code>true</code>. Para utilizarlo, solo necesitas situarlo delante de lo
+que quieres negar. Para utilizarlo, solo se necesita un valor y,
+por tanto, es un operador unario. </p>
+<p>El operador <code>&amp;&amp;</code> corresponde con el operador lógico "and". Si algunos de los
+dos elementos que forman parte de la operación tiene como valor <code>false</code>,
+el resultado de la operación es <code>false</code>. Para que nos entendamos:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nx">gore</span><span class="p">&gt;</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="kc">true</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kc">true</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nx">gore</span><span class="p">&gt;</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="kc">false</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="kc">false</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="nx">gore</span><span class="p">&gt;</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="kc">true</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="kc">false</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="nx">gore</span><span class="p">&gt;</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="kc">false</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="kc">false</span>
+</code></pre></div>
+<p>El último operador del que disponemos es <code>||</code>, que corresponde al "or"
+lógico. Con que uno de los dos operados sea verdadero, el
+resultado también lo es:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nx">gore</span><span class="p">&gt;</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="kc">true</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kc">true</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nx">gore</span><span class="p">&gt;</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="kc">false</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="kc">true</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="nx">gore</span><span class="p">&gt;</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="kc">true</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="kc">true</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="nx">gore</span><span class="p">&gt;</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="kc">false</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="kc">false</span>
+</code></pre></div>
+<p>Como ya se ha mencionado arriba, si intentas aplicar los operadores
+lógicos a elementos cuyo tipo no sea booleano, obtendremos un error:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nx">gore</span><span class="p">&gt;</span><span class="w"> </span><span class="mi">1</span><span class="o">&amp;&amp;</span><span class="mi">1</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="err">#</span><span class="w"> </span><span class="nx">command</span><span class="o">-</span><span class="nx">line</span><span class="o">-</span><span class="nx">arguments</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="o">/</span><span class="nx">tmp</span><span class="o">/</span><span class="mi">315015652</span><span class="o">/</span><span class="nx">gore_session</span><span class="p">.</span><span class="k">go</span><span class="p">:</span><span class="mi">16</span><span class="p">:</span><span class="w"> </span><span class="nx">invalid</span><span class="w"> </span><span class="nx">operation</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">(</span><span class="nx">operator</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">not</span><span class="w"> </span><span class="nx">defined</span><span class="w"> </span><span class="nx">on</span><span class="w"> </span><span class="nx">untyped</span><span class="w"> </span><span class="nx">number</span><span class="p">)</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="kt">error</span><span class="p">:</span><span class="w"> </span><span class="nx">exit</span><span class="w"> </span><span class="nx">status</span><span class="w"> </span><span class="mi">2</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="nx">exit</span><span class="w"> </span><span class="nx">status</span><span class="w"> </span><span class="mi">2</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="nx">gore</span><span class="p">&gt;</span><span class="w"> </span><span class="nb">int</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">&amp;&amp;</span><span class="nb">int</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="err">#</span><span class="w"> </span><span class="nx">command</span><span class="o">-</span><span class="nx">line</span><span class="o">-</span><span class="nx">arguments</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="o">/</span><span class="nx">tmp</span><span class="o">/</span><span class="mi">315015652</span><span class="o">/</span><span class="nx">gore_session</span><span class="p">.</span><span class="k">go</span><span class="p">:</span><span class="mi">16</span><span class="p">:</span><span class="w"> </span><span class="nx">invalid</span><span class="w"> </span><span class="nx">operation</span><span class="p">:</span><span class="w"> </span><span class="nb">int</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">int</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="nx">operator</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">not</span><span class="w"> </span><span class="nx">defined</span><span class="w"> </span><span class="nx">on</span><span class="w"> </span><span class="kt">int</span><span class="p">)</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="kt">error</span><span class="p">:</span><span class="w"> </span><span class="nx">exit</span><span class="w"> </span><span class="nx">status</span><span class="w"> </span><span class="mi">2</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="nx">exit</span><span class="w"> </span><span class="nx">status</span><span class="w"> </span><span class="mi">2</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="nx">gore</span><span class="p">&gt;</span><span class="w"> </span><span class="s">&quot;falso&quot;</span><span class="o">||</span><span class="s">&quot;verdad&quot;</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="err">#</span><span class="w"> </span><span class="nx">command</span><span class="o">-</span><span class="nx">line</span><span class="o">-</span><span class="nx">arguments</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="o">/</span><span class="nx">tmp</span><span class="o">/</span><span class="mi">315015652</span><span class="o">/</span><span class="nx">gore_session</span><span class="p">.</span><span class="k">go</span><span class="p">:</span><span class="mi">16</span><span class="p">:</span><span class="w"> </span><span class="nx">invalid</span><span class="w"> </span><span class="nx">operation</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;falso&quot;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s">&quot;verdad&quot;</span><span class="w"> </span><span class="p">(</span><span class="nx">operator</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nx">not</span><span class="w"> </span><span class="nx">defined</span><span class="w"> </span><span class="nx">on</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="kt">error</span><span class="p">:</span><span class="w"> </span><span class="nx">exit</span><span class="w"> </span><span class="nx">status</span><span class="w"> </span><span class="mi">2</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="nx">exit</span><span class="w"> </span><span class="nx">status</span><span class="w"> </span><span class="mi">2</span>
+</code></pre></div>
+<p>Esto puede sernos bastante engorroso si venimos de, por ejemplo, Python.
+Pero también es una forma de ayudar al programador: solo se va a aplicar
+operaciones lógicas a aquellos elementos a los que haya que aplicárselo.</p>
+<blockquote>
+<p>Ejercicio: se dice que una fórmula es "satisfacible" si es verdadera al 
+menos para una combinación de valores. Con una fórmula de 3 variables,
+¿cuantas combinaciones posibles de valores hay? Diseña una fórmula y pruébala
+sistemáticamente hasta que encuentres si es satisfacible o no. Altérala y
+conviértela en no-satisfacible, probándola también sistemáticamente.</p>
+</blockquote>
+<p>Estos operadores necesitan dos operandos y, por tanto, se llaman binarios.
+En la mayoría de lenguajes de programación, o al menos en los más conocidos,
+se escriben de la misma forma.</p>
+<p>Hay otras operaciones como <code>→</code>, que corresponde con la implicación.
+Es decir, para <code>A → B</code>, si A, entonces B. Si A es cierto, entonces el
+resultado de <code>A → B</code> es B. Pero si es falso, el resultado estaría
+indeterminado, por lo que este operador es, en general, ternario,
+expresando dos posibles resultados dependiendo si el antecedente es
+cierto o falso. En Python lo expresaríamos como:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="s2">&quot;Cierto&quot;</span> <span class="k">if</span> <span class="kc">True</span> <span class="k">else</span> <span class="s2">&quot;Falso&quot;</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="s2">&quot;Cierto&quot;</span>
+</code></pre></div>
+<p>En Go no disponemos de operaciones ternarias en una línea,
+pero podemos obtener el mismo resultado con el siguiente código:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nx">c</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">b</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="k">if</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="p">&gt;</span><span class="w"> </span><span class="nx">b</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="nx">c</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">a</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="p">}</span>
+</code></pre></div>
+<h2 id="otras-operaciones-que-devuelven-valores-logicos">Otras operaciones que devuelven valores lógicos</h2>
+<p>Algunas operaciones, de las que ya vienen predefinidas en el lenguaje,
+también nos devuelven booleanos. El ejemplo más claro, la comparación
+utilizando los operandos "&lt;" (menor que), "&gt;" (mayor que), "&lt;=" (menor o 
+igual que) o "&gt;=" (mayor o igual que):</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nx">gore</span><span class="p">&gt;</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">&lt;</span><span class="w"> </span><span class="mi">2</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="kc">true</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="nx">gore</span><span class="p">&gt;</span><span class="w"> </span><span class="o">-</span><span class="mi">22</span><span class="w"> </span><span class="p">&gt;</span><span class="w"> </span><span class="o">-</span><span class="mi">555</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="kc">true</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="nx">gore</span><span class="p">&gt;</span><span class="w"> </span><span class="o">-</span><span class="mi">2</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="o">-</span><span class="mf">53.3</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="kc">true</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="nx">gore</span><span class="p">&gt;</span><span class="w"> </span><span class="s">&quot;arbol&quot;</span><span class="w"> </span><span class="p">&lt;</span><span class="w"> </span><span class="s">&quot;brazo&quot;</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="kc">true</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="nx">gore</span><span class="p">&gt;</span><span class="w"> </span><span class="s">&quot;a&quot;</span><span class="w"> </span><span class="p">&lt;</span><span class="w"> </span><span class="mf">21.2</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="err">#</span><span class="w"> </span><span class="nx">command</span><span class="o">-</span><span class="nx">line</span><span class="o">-</span><span class="nx">arguments</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="o">/</span><span class="nx">tmp</span><span class="o">/</span><span class="mi">315015652</span><span class="o">/</span><span class="nx">gore_session</span><span class="p">.</span><span class="k">go</span><span class="p">:</span><span class="mi">16</span><span class="p">:</span><span class="w"> </span><span class="nx">cannot</span><span class="w"> </span><span class="nx">convert</span><span class="w"> </span><span class="s">&quot;a&quot;</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="kd">type</span><span class="w"> </span><span class="kt">float64</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="o">/</span><span class="nx">tmp</span><span class="o">/</span><span class="mi">315015652</span><span class="o">/</span><span class="nx">gore_session</span><span class="p">.</span><span class="k">go</span><span class="p">:</span><span class="mi">16</span><span class="p">:</span><span class="w"> </span><span class="nx">invalid</span><span class="w"> </span><span class="nx">operation</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;a&quot;</span><span class="w"> </span><span class="p">&lt;</span><span class="w"> </span><span class="mf">21.2</span><span class="w"> </span><span class="p">(</span><span class="nx">mismatched</span><span class="w"> </span><span class="nx">types</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nx">and</span><span class="w"> </span><span class="kt">float64</span><span class="p">)</span>
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="kt">error</span><span class="p">:</span><span class="w"> </span><span class="nx">exit</span><span class="w"> </span><span class="nx">status</span><span class="w"> </span><span class="mi">2</span>
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="nx">exit</span><span class="w"> </span><span class="nx">status</span><span class="w"> </span><span class="mi">2</span>
+</code></pre></div>
+<p>El orden de los números es claro, mientras que las cadenas siguen el orden
+de la tabla Unicode. Es por ello que si comparamos, por ejemplo, con
+una <code>ñ</code>, empiezan a pasar cosas que pueden parecer "raras":</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nx">gore</span><span class="p">&gt;</span><span class="w"> </span><span class="s">&quot;ñ&quot;</span><span class="w"> </span><span class="p">&lt;</span><span class="w"> </span><span class="s">&quot;z&quot;</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="kc">false</span>
+</code></pre></div>
+<p>Pero, como ya se ha dicho, el orden en el caso de las cadenas de texto viene
+determinado por la tabla Unicode.</p>
+<p>De nuevo, solo podremos utilizar elementos del mismo tipo con estas
+operaciones.</p>
+<p>También disponemos del operando "<mark>" (igualdad). Este operando se utiliza de igual forma en casi 
+todos los lenguajes, aunque algunos incluyen también el operando ""=</mark>"", como JavaScript, que
+diferencia entre <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Equality_comparisons_and_sameness">igualdad abstracta e igualdad estricta
+y</a>. ¿Por
+qué utilizar dos símbolos de igual en vez de uno para representar el concepto de "igualdad"? El
+operando "=" se guarda para la asignación de valores a variables, eso sí, una vez que han
+sido declaradas. Si no las declarado, tienes dos opciones:
+<code>var i int = 1</code> o <code>i:=1</code>. La segunda no estará disponible si no estamos
+dentro de una función.</p>
+<p>En cuanto a la desigualdad, la podemos representar utilizando "!=".  Podríamos también negar la
+igualdad, es decir: <code>!a == b</code> en lugar de <code>a != b</code>, pero no es tan expresivo y sería
+correcto computacionalmente, pero no sintácticamente.</p>
+<blockquote>
+<p>Ejercicio: Usando sólo los símbolos de mayor y menor y operadores lógicos (&amp;&amp; y ||),
+construir una expresión que sea equivalente a !=. Probar con diferentes valores que efectivamente \
+es así.</p>
+<p>Ejercicio: probar, usando todos los casos posibles, las
+<a href="https://es.wikipedia.org/wiki/Leyes_de_De_Morgan">leyes de De Morgan</a>. ¿Cuál sería el
+modo Go de expresar una expresión de ese estilo?</p>
+</blockquote>
+<h3 id="precedencia">Precedencia</h3>
+<p>Al igual que en las operaciones matemáticas, la precedencia es muy importante en las operaciones
+lógicas. Por ejemplo: <code>not 0 and 1</code>, ¿a qué es igual? ¿A (not 0) and 1? ¿O a not( 0 and 1))?
+En general, la precedencia estará marcada por los paréntesis, luego la tendrán los operadores
+unarios (como <code>-</code> precediendo a un número) y finalmente los binarios, también por su orden.
+En los operadores lógicos, la precedencia es <code>!</code> &gt; <code>&amp;&amp;</code> &gt; <code>||</code>, por lo que si quieres
+negar una expresión tendrás que ponerlo entre paréntesis.</p>
+<p>Esto conviene tenerlo en cuenta cuando queremos crear operadores combinados, como el siguiente: 
+En electrónica, conviene expresar las operaciones lógicas usando el mínimo número de conectores
+posibles. Y resulta que <code>NAND</code>, donde <code>a NAND b == ! (a &amp;&amp; b)</code>, es suficiente para expresar
+absolutamente todos los operadores lógicos unarios y binarios. En este caso el paréntesis hace que
+se ejecute primero el <code>a &amp;&amp; b</code> antes que el <code>!</code>; la precedencia más alta del <code>!</code> obliga a
+que se haga de esta forma.</p>
+<blockquote>
+<p>Ejercicio: expresar and, or y not usando sólo NAND y probar exhaustivamente, usando valores
+de true y false, que es así.</p>
+</blockquote>
+<h2 id="un-poco-de-pensamiento-computacional">Un poco de pensamiento computacional</h2>
+<p>Al final, los lenguajes de programación son lenguajes que te permiten expresar y resolver
+problemas. El pensamiento computacional no deja de ser pensar utilizando ordenadores para
+resolver un problema a través de un lenguaje de programación, cuya base radica en: descomposición,
+reconocimiento de patrones y abstracción.</p>
+<p>La <strong>abstracción</strong> se basa, entre otras cosas, en saber elegir la estructura de datos adecuada
+para el problema con el que estamos trabajando. ¿Se trata de un número? ¿Un conjunto de números?
+¿Un conjunto de caracteres? En cualquier lenguaje de programación, la estructura de datos
+elegida determina qué se puede hacer, eficientemente o posiblemente, con un dato
+determinado. Incluso el lenguaje de programación a usar, porque no todos los lenguajes
+pueden trabajar con todos los datos fácilmente. Por ejemplo, Python puede usar números complejos,
+con una parte real y otra imaginaria, como tipo de dato básico.</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="mi">3</span><span class="o">+</span><span class="mf">0.1</span><span class="n">j</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="mi">3</span><span class="o">+</span><span class="mf">0.1</span><span class="n">j</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="p">(</span><span class="mi">3</span><span class="o">+</span><span class="mf">0.1</span><span class="n">j</span><span class="p">)</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">_</span><span class="o">**</span><span class="mi">2</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="n">_</span><span class="o">**</span><span class="mi">2</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="p">(</span><span class="mf">8.99</span><span class="o">+</span><span class="mf">0.6000000000000001</span><span class="n">j</span><span class="p">)</span>
+</code></pre></div>
+En Python, la parte imaginaria se representa, por alguna razón, por
+<code>j</code> en vez del convencional <code>i</code>, que es el que se usa en Ruby o en
+Perl6:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="w"> </span><span class="p">:</span><span class="mo">002</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="p">(</span><span class="mi">3</span><span class="o">+</span><span class="mi">4</span><span class="n">i</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">5</span><span class="o">+</span><span class="mi">0</span><span class="o">.</span><span class="mi">1</span><span class="n">i</span><span class="p">)</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="p">(</span><span class="mi">14</span><span class="o">.</span><span class="mi">6</span><span class="o">+</span><span class="mi">20</span><span class="o">.</span><span class="mi">3</span><span class="n">i</span><span class="p">)</span>
+</code></pre></div>
+<p>A priori, es complejo pensar en algún problema "del mundo real" que use los números complejos.
+Pero las matemáticas son también del mundo real, y problemas como "¿Diverge la sucesión (1+πi)ⁿ?"
+tendrá que comenzar por una fase de abstracción en la que se decidirá que la forma más eficiente
+de trabajar es usando estos números complejos. Trabajando en la línea de órdenes:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="o">&gt;&gt;&gt;</span><span class="mi">1</span> <span class="o">+</span> <span class="mf">3.14</span><span class="n">j</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">_</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="mf">3.14</span><span class="n">j</span><span class="p">)</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="n">_</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="mf">3.14</span><span class="n">j</span><span class="p">)</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="p">(</span><span class="mf">3.141592653589793</span><span class="o">+</span><span class="mf">9.864600932271951</span><span class="n">j</span><span class="p">)</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">_</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="mf">3.14</span><span class="n">j</span><span class="p">)</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="n">_</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="mf">3.14</span><span class="n">j</span><span class="p">)</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="p">(</span><span class="o">-</span><span class="mf">27.833254273744135</span> <span class="o">+</span> <span class="mf">19.729201864543903</span><span class="n">j</span><span class="p">)</span>
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">_</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="mf">3.14</span><span class="n">j</span><span class="p">)</span>
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="n">_</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="mf">3.14</span><span class="n">j</span><span class="p">)</span>
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="p">(</span><span class="o">-</span><span class="mf">89.78294812841199</span><span class="o">-</span><span class="mf">67.66721655501269</span><span class="n">j</span><span class="p">)</span>
+<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">_</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="mf">3.14</span><span class="n">j</span><span class="p">)</span>
+<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a><span class="n">_</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="mf">3.14</span><span class="n">j</span><span class="p">)</span>
+<a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a><span class="p">(</span><span class="mf">122.69211185432786</span><span class="o">-</span><span class="mf">349.5856736782264</span><span class="n">j</span><span class="p">)</span>
+</code></pre></div>
+<p>Vemos que tiene toda la pinta de diverger, así que la respuesta es que
+sí. El uso de números complejos venía de forma natural en este caso,
+y el hecho de que Python lo tenga como estructura de datos básica es
+un hecho afortunado, por lo que es la elección natural también. En
+otros lenguajes, como JavaScript, habría sido algo más complicado,
+teniendo que usar vectores y definir una serie de funciones de
+multiplicación de tales vectores al modo complejo.</p>
+<p>En Go puedes trabajar de la misma forma con los números complejos,
+pero utilizando <code>i</code> para designar a la parte imaginaria.</p>
+<p>La <strong>descomposición</strong>, por otro lado, trata de descomponer un problema
+monolítico en varios problemas más pequeños. Por ejemplo, descomponer
+un problema en una serie de operaciones básicas, todas ellas ya
+conocidas, que se puedan ejecutar en secuencia, en nuestro caso desde
+la línea de órdenes. Por ejemplo, veamos el problema de recrear todos
+los números del 1 al 5 usando exactamente 4 números 5, por separado o
+como cifras de un solo número; también como decimales. La primera
+descomposición es natural: hacer cada número por separado. Pero la
+segunda es tratar de conseguir partes de un número usando operaciones
+con 5s. Cero, por ejemplo, es 5-5. Uno, 5/5. Esta no es la solución a
+los dos primeros, pero sí para el tercero, 2 == 5/5 + 5/5. ¿Y cómo
+haríamos 5? Teniendo en cuenta que cualquier cosa multiplicada por 0
+es cero...</p>
+<blockquote>
+<p><em>Ejercicio</em>: usa sólo cuatro números 5 para reconstruir los números del 0
+al 5. Si puedes, hazlo hasta el 10.</p>
+</blockquote>
+<p>El último mecanismo, el <strong>reconocimiento de patrones</strong>, se aleja más de
+lo puramente computacional, siendo simplemente una herramienta del
+pensamiento crítico. Pero eso no quiere decir que no sea útil. Por
+ejemplo, muchas de las técnicas, o la mayoría, de las usadas en el
+ejercicio anterior, ¿se podrían usar con cualquier otro número, es
+decir, sustituyendo el 5 por el 4 o por el 7?</p>
+<blockquote>
+<p><em>Ejercicio</em>: ¿Para qué números se pueden usar más o menos los mismos
+patrones que para el 5? ¿Funciona con el 4? ¿Funciona con el 6?
+Específicamente, ¿con qué resultados hay que hacer pequeños cambios
+para que funcione?</p>
+</blockquote>
+<p>Como parte de la descomposición mencionada anteriormente está el hecho
+de que, eventualmente, toda la información que hay en un ordenador se
+reduce a puertas lógicas que pueden tomar un valor 0 o 1, verdad o
+mentira. Esto es lo que viene siendo trabajar con bits.</p>
+<h2 id="operaciones-a-nivel-de-bit">Operaciones a nivel de bit</h2>
+<p>Trabajar con números en su representación binaria muchas veces es
+la forma más rápida de hacer ciertas pruebas; dado que, de hecho, el
+número ya está en esa representación, hacer ciertas operaciones
+es más rápido que hacerlo de otra forma. Por ejemplo,
+los números pasados a binario tienen un <code>1</code> como último bit si son
+impares, y <code>0</code> si son pares. Para comprobar si este último bit está
+<em>encendido</em> (o sea, es un 1), se compara bit a bit con <code>1</code></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nx">gore</span><span class="p">&gt;</span><span class="w"> </span><span class="mi">33</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mi">1</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="mi">1</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="nx">gore</span><span class="p">&gt;</span><span class="w"> </span><span class="mi">30</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mi">1</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="mi">0</span>
+</code></pre></div>
+<p><code>&amp;</code> es el <em>y bit a bit</em>, o <em>bitwise and</em>, que toma cada bit de los dos
+operandos y lo compara, haciendo la operación lógica correspondiente y
+dando el resultado. De la misma forma se puede también multiplicar y
+dividir por 2 o cualquier potencia de 2, usando  los operadores que corren a la izquierda <code>&lt;&lt;</code> o
+derecha <code>&gt;&gt;</code> el número de bits que le digamos.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nx">gore</span><span class="p">&gt;</span><span class="w"> </span><span class="mi">333</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">1</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="mi">166</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="nx">gore</span><span class="p">&gt;</span><span class="w"> </span><span class="mi">888</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">1</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="mi">1776</span>
+</code></pre></div>
+<p>Así, <code>&lt;&lt;</code> puede ser una forma rápida de hallar potencias de 2</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="nx">gore</span><span class="p">&gt;</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">36</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="mi">137438953472</span>
+</code></pre></div>
+<p>El siguiente operador es bastante interesante: <code>XOR</code>.
+Se trata de un operador lógico que es 1 cuando uno de los dos operandos es 1, pero no
+cuando lo son los dos, se denomina <em>o exclusivo</em> o <em>exclusive or</em>. No existe un símbolo en
+Go para representar este operando. Uno de sus usos es para hacer <em>flipping</em>, o cambiar el 
+valor de un bit a su contrario. Una forma rápida de cambiar el bit <em>n</em>
+de un número puede ser la siguiente:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>gore&gt; 32 ^ (1 &lt;&lt; 3)
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>40
+</code></pre></div>
+<p><code>1 &lt;&lt; 3</code> correspondería al número binario <code>100</code>, es decir, 1 corrido
+tres posiciones. 32 es el número binario <code>10000</code>. <code>32 ^ 8</code> es <code>10000 ^
+100</code>, es decir, cambiaría el tercer bit (empezando por izquierda o derecha,
+da igual), que convertiría el número en el 40 que vemos.</p>
+<p>En otros lenguajes, como <a href="http://lua.org">Lua</a>, se usan exactamente
+los mismos símbolos para el mismo tipo de operadores. Estos
+operadores, al no ser <em>naturales</em> como la suma o la resta, se prestan
+a la creatividad por parte de los diseñadores de los lenguajes. Por
+ejemplo, en Lua hallaríamos la media de 8 y 32 de esta forma:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="o">&gt;</span> <span class="p">(</span><span class="mi">8</span><span class="o">+</span><span class="mi">32</span><span class="p">)</span> <span class="o">&gt;&gt;</span> <span class="mi">1</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="mi">20</span>
+</code></pre></div>
+<p>que, casualmente es exactamente la misma forma en la que lo haríamos
+en Go o Python. El truco aquí es simplemente darse cuenta de que <code>&gt;&gt; 1</code> es
+como una división entera por dos. Esto no funciona si alguno de
+los números es impar, pero si se trabaja sólo con enteros sería una
+forma muy rápida, ya que se hace directamente en el procesador usando
+instrucciones del mismo, de realizar esta operación.</p>
+<blockquote>
+<p><em>Ejercicio</em> Implementar el operando <code>xor</code> utilizando los demás operadores lógicos.</p>
+</blockquote>
+<p>Es muy probable que para alguno de los ejercicios anteriores hayas tenido buscar en
+Internet. Si lo has hecho, te habrás dado cuenta de que</p>
+<h2 id="todo-esta-en-stackoverflow">todo está en StackOverflow,</h2>
+<p>como ya hemos apuntado antes cuando hemos hablado de los problemas de entendimiento. </p>
+<p>Para qué vamos a engañarnos, seguro que siguiendo este tutorial o,
+para el caso, cualquier otro, has consultado una o más veces Google
+buscando cómo hacer algo. Un dominio ligero del inglés y una conexión
+a Internet es lo que hace falta para aprender prácticamente cualquier
+cosa, desde lenguajes a macramé. A un nivel en el que se esté
+comenzando en un lenguaje, todas tus preguntas tendrán cumplida
+respuesta, incluso si provienes de otro lenguaje de programación
+preguntando <em>equivalences of whatever thislanguage
+thisotherlanguage</em>. En muchos casos habrá también vídeos o cursos
+enteros, en ocasiones gratuitos, para aprender lo que uno desee.</p>
+<p>Muchas de las respuestas van a estar
+en <a href="http://stackoverflow.com">StackOverflow</a>, que se inició como un
+sitio de preguntas y respuestas pero que eventualmente ha evolucionado
+en una serie de sitios de diferentes temas, desde la historia hasta la
+estadística pasando por LaTeX o, por supuesto, programación.</p>
+<p>StackOverflow tiene un sistema de puntuaciones por parte de los
+usuarios que presenta como mejor respuesta la mejor puntuada; eso te
+garantiza, más o menos, que tu consulta va a obtener una buena respuesta, si es que la hay, ya que
+además se pueden editar con el tiempo si quedan obsoletas por lo que
+sea. El único peligro puede ser que la respuesta esté obsoleta, pero
+de forma más o menos consistente sueles obtener una buena respuesta. A
+veces está en los foros de <a href="http://reddit.com">Reddit</a>; Reddit tiene
+una serie de foros llamados <em>subreddits</em> donde se pueden postear
+preguntas y un sistema más o menos similar de puntuación.</p>
+<p>Lo bueno que tienen estos sitios es precisamente esa interacción:
+puedes comenzar conversaciones y valorar las que hay. Si te das de alta puedes, y de hecho
+debes, votar a las preguntas que te ayuden, aparte de a las
+respuestas. También editarlas si tienes <em>karma</em> suficiente, y por supuesto si en alguna puedes
+ayudar, aportar soluciones. Eventualmente, puedes también preguntar si
+tienes alguna duda, no sin antes hacer lo siguiente:</p>
+<ol>
+<li>
+<p>Buscar exhaustivamente por todo Google y el propio StackOverflow
+   por una respuesta a esa pregunta y algunas más generales.</p>
+</li>
+<li>
+<p>Reducir al mínimo trozo de código el error o el problema que tengas. No puedes
+   subir 200 líneas de código y esperar que alguien se las lea. Si el
+   error está en 2 líneas, mucho mejor.</p>
+</li>
+<li>
+<p>Poner de forma precisa cuál es el error: mensaje de error completo
+   o de forma precisa qué es lo que quieres hacer y no puedes. Durante
+   este proceso el propio StackOverflow te sugerirá otras
+   posibilidades. Léelas con cuidado, porque es posible que esté la
+   respuesta.</p>
+</li>
+<li>
+<p>Una vez hecha la pregunta, difúndela por las redes sociales. Se
+   hacen miles de preguntas en StackOverflow a cada rato. Una puede pasar sin
+   pena, gloria ni solución. La difusión ayuda.</p>
+</li>
+</ol>
+<p>Una vez que empieces a hacerlo, te convertirás en un verdadero experto
+y comprenderás el chiste que circula diciendo que los cursos de
+programación se van a
+renombrar
+<a href="https://www.gitbook.com/book/tra38/essential-copying-and-pasting-from-stack-overflow/details">"Cortar y pegar de StackOverflow"</a>.
+Lo cierto es que ayuda mucho desde el proceso de aprendizaje... Hasta el
+proceso de aprendizaje, que en programación nunca acaba.</p>
+<h2 id="concluyendo">Concluyendo</h2>
+<p>Los operadores lógicos te serán necesarios a la hora de tomar decisiones sobre el
+flujo que tiene que seguir tu programa. Por otro lado, cuando vayas a enfrentarte a un problema,
+tienes que tomar algunas decisiones previas para tomar la mejor decisión posible. Por supuesto,
+es importante que aprendas a buscar información en Internet para resolver todos aquellos problemas
+ante los que te puedas encontrar mientras aprendes un lenguaje de programación.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../../03.datos/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Datos">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Datos
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../2_doc_md/09.documentacion-con-markdown/" class="md-footer__link md-footer__link--next" aria-label="Next: Documentación con Markdown">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Documentación con Markdown
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.indexes", "content.code.copy", "code.conten.copy", "content.tabs.link", "navigation.footer"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      
+    
+  </body>
+</html>
