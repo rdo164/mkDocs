@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - main  # Asegúrate de que esto coincida con el nombre de tu rama principal
-      - gh-pages
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -14,11 +14,12 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
-        python-version: '3.x'
+        python-version: 3.x
 
     - name: Install dependencies
       run: |
-        pip install mkdocs mkdocs-material
+        pip install mkdocs mkdocs-material  
+        
 
     - name: Change to the MkDocs directory
       run: cd primer-project
