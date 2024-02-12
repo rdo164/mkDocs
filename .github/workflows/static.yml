@@ -9,23 +9,21 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
 
     - name: Set up Python
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v3
       with:
-        python-version: 3.x
+        python-version: '3.x'
 
     - name: Install dependencies
       run: |
-        pip install mkdocs mkdocs-material  
-        
-
-    - name: Change to the MkDocs directory
-      run: cd primer-project
+        pip install mkdocs mkdocs-material
+      working-directory: primer-project
 
     - name: Build the MkDocs website
       run: mkdocs build
+      working-directory: primer-project
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
