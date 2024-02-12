@@ -15,3 +15,9 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org).
     docs/
         index.md  # The documentation homepage.
         ...       # Other markdown pages, images and other files.
+
+via osdnz,
+v pçsZ>ñv +kSÑD 
+ w
+ `kp    	w 
+ etp`kf'ti WFEK
