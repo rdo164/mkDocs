@@ -1,4 +1,91 @@
 site_name: PEPAS-API
-site_url: https://example.com/
+
 nav:
-  - Home: index.md
+  - 'La Línea de Órdenes': '011.la-línea-de-órdenes.md'
+  - 'Datos': '03.datos.md'
+  - 'Lógica': '1_logica/04.logica.md'
+  - 'Documentación con Markdown': '2_doc_md/09.documentacion-con-markdown.md'
+
+site_description: 
+  Documentation of ROD
+#Repositorio
+
+# docs_dir: ./docs
+theme: 
+  name: material
+
+  color: blue
+ 
+  features:
+    - navigation.tabs # se encarga de la navegación superior
+    - navigation.indexes
+    - content.code.copy
+    - code.conten.copy
+    - content.tabs.link
+    - navigation.footer # Genera los botones inferiores de la página web
+
+  extra_css:
+    - stylesheets/extra.css
+
+  language: en
+  # Logo de la parte superior Izquierda de la página
+  logo: assets/images/logo.svg.png
+  # logo de la parte superior de la página
+  favicon:  assets/favicon.png
+  # icono de github, al lado del buscador
+  icon:
+    repo: simple/github
+  font:
+    primary: white
+    text : Roboto
+  palette:
+
+      # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme: light)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+       # color de la barra del header, barra de navegación, textos...
+      primary: light-blue
+        # color de links, a en html
+      accent: blue
+    # Palette toggle for light mode
+ 
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+      primary: light-blue
+      # color de links, a en html
+      accent: blue
+ 
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+      primary: light-blue
+        # color de links, a en html
+      accent: blue
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - admonition
+  - pymdownx.arithmatex:
+      generic: true
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.mark
+  - attr_list
+  - pymdownx.emoji:
+      #emoji_index: !!python/name:materialx.emoji.twemoji
+      #emoji_generator: !!python/name:materialx.emoji.to_svg
+
+extra_css:
+  - stylesheets/extra.css
