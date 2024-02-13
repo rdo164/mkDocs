@@ -34,11 +34,30 @@ Las dos **únicas opciones de configuración** son:
 - site_url: https://example.com/
 ```
 
-## Desplegarlo en Github Pages
-> Hay que crear una Github Actions
-dentro del directorio crear la carpeta .github
-dentro de la carpeta otra carpeta llamada workflows y en esta creamos nuestro archivo .yml para conseguir el CICD.
-Píldora Path
+
+## DESPLIEGUE DE LA PÁGINA WEB
+> Github ofrece runners gratuitos por lo que no es necesario alojarlo. Los pasos son los siguientes:
+
+1. Hacer uso del siguiente comando.
+```
+mkdocs gh-deploy 
+```
+Con este comando se ha creado una nueva rama en github, gh-pages, donde se van a almacena todos los archivos html necesarios para el despliegue.
+
+2. Ir a github > Settings > Pages 
+
+![](./images_documentación/pages.png)
+
+Se selecciona la rama gh-pages y la carpeta raíz, ya que contiene todos los archivos necesarios para crear la página web. 
+
+Al poco rato nos aparecerá el link de nuestro sitio web desplegado con la url que muestra la imagen.
+
+## CREAR EL CI
+
+1. Crear la carpeta .github. 
+2. Dentro de la carpeta crear workflows.
+
+El organigrama debe ser tal que así: 
 ``` 
 Carpeta padre/
               .git
@@ -46,17 +65,56 @@ Carpeta padre/
                       workflows/
                                 XXXXXXXX.yml(encargado del CICD)
 ```
+3. Configurar el XXXXXXXX.yml para que realice una serie de tareas cada vez que sucede un evento.
 
-## CREAR EL CICD 
+En este caso es para no tener que generar manualmente los archivos html. 
+```
+name: ci 
+on:
+  push:
+    branches:
+      - master 
+      - main
 
-POWERSHELL en **administrador**
+permissions:
+  contents: write
 
-en el archivo .yml runs-on:[self-hosted]
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Configure Git Credentials
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: 3.x
+
+      - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV 
+
+      - uses: actions/cache@v4
+        with:
+          key: mkdocs-material-${{ env.cache_id }}
+          path: .cache
+          restore-keys: |
+            mkdocs-material-
+
+      - run: pip install mkdocs-material 
+
+      - name: Build and deploy MkDocs site
+        run: mkdocs gh-deploy --force
+        working-directory: primer-project
+
+```
 
 
 
-## 
-dentro de github pages se ha creado una nueva rama (gh-pages) para la automaticzacion de la página web
+
+
 
 ## CREAR ENTORNOS VIRTUALES CON VENWRAPPER
 1. Instalar python
