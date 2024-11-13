@@ -1,4 +1,4 @@
-site_name: PEPAS-API
+site_name: BSC BASQUE SMART CASUALS 
 repo_url: https://rdo164.github.io/mkDocs/
 nav:
   - 'La Línea de Órdenes': '011.la-línea-de-órdenes.md'
@@ -29,9 +29,9 @@ theme:
 
   language: en
   # Logo de la parte superior Izquierda de la página
-  logo: assets/images/logo.svg.png
+  logo: ./img/log.jpeg
   # logo de la parte superior de la página
-  favicon:  assets/favicon.png
+  favicon:  ./img/log.jpeg
   # icono de github, al lado del buscador
   icon:
     repo: simple/github
@@ -69,23 +69,6 @@ theme:
       primary: light-blue
         # color de links, a en html
       accent: blue
-
-markdown_extensions:
-  - pymdownx.highlight:
-      anchor_linenums: true
-  - pymdownx.inlinehilite
-  - pymdownx.snippets
-  - admonition
-  - pymdownx.arithmatex:
-      generic: true
-  - footnotes
-  - pymdownx.details
-  - pymdownx.superfences
-  - pymdownx.mark
-  - attr_list
-  - pymdownx.emoji:
-      #emoji_index: !!python/name:materialx.emoji.twemoji
-      #emoji_generator: !!python/name:materialx.emoji.to_svg
 
 extra_css:
   - stylesheets/extra.css
