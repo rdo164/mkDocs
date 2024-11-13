@@ -1,23 +1,5 @@
-# Welcome to MkDocs
+# Welcome to the websiten of the BSC
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 
-## Commands
-
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
-
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
-
-via osdnz,
-v pçsZ>ñv +kSÑD 
- w
- `kp    	w 
- etp`kf'ti WFEK
+If you want our T-shirt, eat my dick motherfucker
+![](./img/WhatsApp%20Image%202024-09-26%20at%2022.05.56.jpeg)
